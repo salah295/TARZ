@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SALEM — Catalogue</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-dar">SALEM</span>
+        <span class="logo-name">Catalogue</span>
+        <p class="logo-subtitle">Catalogue de tenues traditionnelles marocaines</p>
+      </div>
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="9" r="6"/><path d="M15 15l-3-3"/>
+        </svg>
+        <input type="text" id="search" placeholder="Rechercher un modèle ou numéro…" />
+      </div>
+    </div>
+  </header>
+
+  <nav class="filters">
+    <div class="filter-section">
+      <span class="filter-label">Type</span>
+      <div class="chip-group" id="type-chips">
+        <button class="chip active" data-type="all">Tous</button>
+        <button class="chip caftan" data-type="Caftan">Caftan</button>
+        <button class="chip jellaba" data-type="Jellaba">Jellaba</button>
+        <button class="chip tackchita" data-type="Tackchita">Tackchita</button>
+      </div>
+    </div>
+    <div class="filter-section">
+      <span class="filter-label">Année</span>
+      <select id="year-sel">
+        <option value="all">Toutes</option>
+        <option>2020</option>
+        <option>2021</option>
+        <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+        <option>2025</option>
+        <option>2026</option>
+      </select>
+    </div>
+    <button class="reset-btn" id="reset-btn">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" width="13" height="13">
+        <path d="M2 8a6 6 0 1 0 1-3.5"/><path d="M2 4v4h4"/>
+      </svg>
+      Réinitialiser
+    </button>
+  </nav>
+
+  <div class="stats-bar">
+    <span id="stats-text"></span>
+  </div>
+
+  <main class="grid" id="grid"></main>
+
+  <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-label="Détail du produit">
+    <div class="modal-card" id="modal-content">
+      <button class="modal-close-btn" id="modal-close" aria-label="Fermer">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <path d="M3 3l10 10M13 3L3 13"/>
+        </svg>
+      </button>
+      <div class="modal-img" id="m-img"></div>
+      <div class="modal-body">
+        <div class="modal-badge" id="m-badge"></div>
+        <h2 class="modal-title" id="m-name"></h2>
+        <div class="modal-details">
+          <div class="detail-row"><span class="detail-key">Numéro</span><span class="detail-val" id="m-num"></span></div>
+          <div class="detail-row"><span class="detail-key">Type</span><span class="detail-val" id="m-type"></span></div>
+          <div class="detail-row"><span class="detail-key">Année</span><span class="detail-val" id="m-year"></span></div>
+        </div>
+        <div class="modal-price" id="m-price"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
