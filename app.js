@@ -60,10 +60,10 @@ const products = [
   { id: 46, name: "Jellaba 2025 #34",       num: "JEL-046", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250801_190011_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 47, name: "Jellaba 2025 #35",       num: "JEL-047", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250804_091625_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 48, name: "Jellaba 2025 #36",       num: "JEL-048", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250805_141435_WhatsApp.jpg", emoji: "🧥", download: "" },
-  { id: 13, name: "Jellaba 2025 #1",        num: "JEL-013", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250303_180810.jpg", emoji: "🧥", download: "" },
-  { id: 14, name: "Jellaba 2025 #2",        num: "JEL-014", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250406_180444.jpg", emoji: "🧥", download: "" },
-  { id: 15, name: "Jellaba 2025 #3",        num: "JEL-015", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250506_132225.jpg", emoji: "🧥", download: "" },
-  { id: 16, name: "Jellaba 2025 #4",        num: "JEL-016", type: "Jellaba",    year: 2025, price: "",   img: "2025/20251022_183928.jpg", emoji: "🧥", download: "" },
+ /* { id: 13, name: "Jellaba 2025 #1",        num: "JEL-013", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250303_180810.jpg", emoji: "🧥", download: "" },*/
+ /* { id: 14, name: "Jellaba 2025 #2",        num: "JEL-014", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250406_180444.jpg", emoji: "🧥", download: "" },*/
+ /* { id: 15, name: "Jellaba 2025 #3",        num: "JEL-015", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250506_132225.jpg", emoji: "🧥", download: "" },*/
+  /*{ id: 16, name: "Jellaba 2025 #4",        num: "JEL-016", type: "Jellaba",    year: 2025, price: "",   img: "2025/20251022_183928.jpg", emoji: "🧥", download: "" },*/
   { id: 17, name: "Jellaba 2025 #5",        num: "JEL-017", type: "Jellaba",    year: 2025, price: "",   img: "2025/20251208_123822.jpg", emoji: "🧥", download: "" },
   /*{ id: 49, name: "Jellaba 2025 #37",       num: "JEL-049", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250825_120819_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 50, name: "Jellaba 2025 #38",       num: "JEL-050", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250827_114644_WhatsApp.jpg", emoji: "🧥", download: "" },
@@ -171,7 +171,7 @@ const products = [
   { id: 152, name: "Jellaba 2021 #40",      num: "JEL-152", type: "Jellaba",    year: 2021, price: "",   img: "2021/Screenshot_20260209_160914_Gallery.jpg", emoji: "🧥", download: "" },
     { id: 153, name: "Jellaba 2022 #1", num: "JEL-153", type: "Jellaba", year: 2022, price: "", img: "2022/20221102_122053.jpg", emoji: "🧥", download: "" },
   { id: 154, name: "Jellaba 2022 #2", num: "JEL-154", type: "Jellaba", year: 2022, price: "", img: "2022/20230111_125354.jpg", emoji: "🧥", download: "" },
-  { id: 155, name: "Jellaba 2022 #3", num: "JEL-155", type: "Jellaba", year: 2022, price: "", img: "2022/20230208_141457.jpg", emoji: "🧥", download: "" },
+ /* { id: 155, name: "Jellaba 2022 #3", num: "JEL-155", type: "Jellaba", year: 2022, price: "", img: "2022/20230208_141457.jpg", emoji: "🧥", download: "" },*/
   { id: 156, name: "Jellaba 2022 #4", num: "JEL-156", type: "Jellaba", year: 2022, price: "", img: "2022/20241114_125135.jpg", emoji: "🧥", download: "" },
   { id: 157, name: "Jellaba 2022 #5", num: "JEL-157", type: "Jellaba", year: 2022, price: "", img: "2022/698 (01_22).jpg", emoji: "🧥", download: "" },
   { id: 158, name: "Jellaba 2022 #6", num: "JEL-158", type: "Jellaba", year: 2022, price: "", img: "2022/757 (04_22).jpg", emoji: "🧥", download: "" },
@@ -271,18 +271,18 @@ const products = [
   { id: 252, name: "Jellaba 2022 #100", num: "JEL-252", type: "Jellaba", year: 2022, price: "", img: "2022/Screenshot_20250212_104414_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 253, name: "Jellaba 2022 #101", num: "JEL-253", type: "Jellaba", year: 2022, price: "", img: "2022/Screenshot_20250521_134931_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 254, name: "Jellaba 2022 #102", num: "JEL-254", type: "Jellaba", year: 2022, price: "", img: "2022/Screenshot_20251210_090212_WhatsApp.jpg", emoji: "🧥", download: "" },
-  { id: 255, name: "Jellaba 2023 #1", num: "JEL-255", type: "Jellaba", year: 2023, price: "", img: "2023/20230208_141751.jpg", emoji: "🧥", download: "" },
+  /*{ id: 255, name: "Jellaba 2023 #1", num: "JEL-255", type: "Jellaba", year: 2023, price: "", img: "2023/20230208_141751.jpg", emoji: "🧥", download: "" },*/
   { id: 256, name: "Jellaba 2023 #2", num: "JEL-256", type: "Jellaba", year: 2023, price: "", img: "2023/20230210_174318.jpg", emoji: "🧥", download: "" },
   { id: 257, name: "Jellaba 2023 #3", num: "JEL-257", type: "Jellaba", year: 2023, price: "", img: "2023/20230210_174605.jpg", emoji: "🧥", download: "" },
   { id: 258, name: "Jellaba 2023 #4", num: "JEL-258", type: "Jellaba", year: 2023, price: "", img: "2023/20230221_162434.jpg", emoji: "🧥", download: "" },
-  { id: 259, name: "Jellaba 2023 #5", num: "JEL-259", type: "Jellaba", year: 2023, price: "", img: "2023/20230223_194152.jpg", emoji: "🧥", download: "" },
+ /* { id: 259, name: "Jellaba 2023 #5", num: "JEL-259", type: "Jellaba", year: 2023, price: "", img: "2023/20230223_194152.jpg", emoji: "🧥", download: "" },*/
   { id: 260, name: "Jellaba 2023 #6", num: "JEL-260", type: "Jellaba", year: 2023, price: "", img: "2023/20230301_201020.jpg", emoji: "🧥", download: "" },
   { id: 261, name: "Jellaba 2023 #7", num: "JEL-261", type: "Jellaba", year: 2023, price: "", img: "2023/20230303_090619.jpg", emoji: "🧥", download: "" },
   { id: 262, name: "Jellaba 2023 #8", num: "JEL-262", type: "Jellaba", year: 2023, price: "", img: "2023/20230304_175737.jpg", emoji: "🧥", download: "" },
   { id: 263, name: "Jellaba 2023 #9", num: "JEL-263", type: "Jellaba", year: 2023, price: "", img: "2023/20230710_235625.jpg", emoji: "🧥", download: "" },
   { id: 264, name: "Jellaba 2023 #10", num: "JEL-264", type: "Jellaba", year: 2023, price: "", img: "2023/20230715_081525.jpg", emoji: "🧥", download: "" },
-  { id: 265, name: "Jellaba 2023 #11", num: "JEL-265", type: "Jellaba", year: 2023, price: "", img: "2023/20230717_180307.jpg", emoji: "🧥", download: "" },
-  { id: 266, name: "Jellaba 2023 #12", num: "JEL-266", type: "Jellaba", year: 2023, price: "", img: "2023/20230918_184854.jpg", emoji: "🧥", download: "" },
+ /* { id: 265, name: "Jellaba 2023 #11", num: "JEL-265", type: "Jellaba", year: 2023, price: "", img: "2023/20230717_180307.jpg", emoji: "🧥", download: "" },*/
+  /*{ id: 266, name: "Jellaba 2023 #12", num: "JEL-266", type: "Jellaba", year: 2023, price: "", img: "2023/20230918_184854.jpg", emoji: "🧥", download: "" },*/
   { id: 267, name: "Jellaba 2023 #13", num: "JEL-267", type: "Jellaba", year: 2023, price: "", img: "2023/20231205_160656.jpg", emoji: "🧥", download: "" },
   { id: 268, name: "Jellaba 2023 #14", num: "JEL-268", type: "Jellaba", year: 2023, price: "", img: "2023/20240514_130947.jpg", emoji: "🧥", download: "" },
   { id: 269, name: "Jellaba 2023 #15", num: "JEL-269", type: "Jellaba", year: 2023, price: "", img: "2023/IMG-20230227-WA0044.jpg", emoji: "🧥", download: "" },
@@ -376,7 +376,7 @@ const products = [
   { id: 357, name: "Jellaba 2024 #38", num: "JEL-357", type: "Jellaba", year: 2024, price: "", img: "2024/Screenshot_20250825_080639_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 358, name: "Jellaba 2024 #39", num: "JEL-358", type: "Jellaba", year: 2024, price: "", img: "2024/Screenshot_20250922_215513_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 359, name: "Jellaba 2024 #40", num: "JEL-359", type: "Jellaba", year: 2024, price: "", img: "2024/Screenshot_20250922_215513_WhatsApp.jpg", emoji: "🧥", download: "" },
-  { id: 360, name: "Jellaba 2026 #1", num: "JEL-360", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132321.jpg", emoji: "🧥", download: "" },
+  /*{ id: 360, name: "Jellaba 2026 #1", num: "JEL-360", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132321.jpg", emoji: "🧥", download: "" },*/
   { id: 361, name: "Jellaba 2026 #2", num: "JEL-361", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132605.jpg", emoji: "🧥", download: "" },
   { id: 362, name: "Jellaba 2026 #3", num: "JEL-362", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260224_102355_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
   { id: 363, name: "Jellaba 2026 #4", num: "JEL-363", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260228_141744_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
