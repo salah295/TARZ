@@ -28,11 +28,7 @@
 const DOWNLOAD_PASSWORD = "salem2024";
 
 const products = [
-  { id: 13, name: "Jellaba 2025 #1",        num: "JEL-013", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250303_180810.jpg", emoji: "🧥", download: "" },
-  { id: 14, name: "Jellaba 2025 #2",        num: "JEL-014", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250406_180444.jpg", emoji: "🧥", download: "" },
-  { id: 15, name: "Jellaba 2025 #3",        num: "JEL-015", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250506_132225.jpg", emoji: "🧥", download: "" },
-  { id: 16, name: "Jellaba 2025 #4",        num: "JEL-016", type: "Jellaba",    year: 2025, price: "",   img: "2025/20251022_183928.jpg", emoji: "🧥", download: "" },
-  { id: 17, name: "Jellaba 2025 #5",        num: "JEL-017", type: "Jellaba",    year: 2025, price: "",   img: "2025/20251208_123822.jpg", emoji: "🧥", download: "" },
+  
   { id: 18, name: "Jellaba 2025 #6",        num: "JEL-018", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250108_175109_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 19, name: "Jellaba 2025 #7",        num: "JEL-019", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250303_101424_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 20, name: "Jellaba 2025 #8",        num: "JEL-020", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250306_215925_WhatsApp.jpg", emoji: "🧥", download: "" },
@@ -96,6 +92,11 @@ const products = [
   { id: 78, name: "Jellaba 2025 #66",       num: "JEL-078", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20260404_100340_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
   { id: 79, name: "Jellaba 2025 #67",       num: "JEL-079", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20260409_132410_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
   { id: 80, name: "Jellaba 2025 #68",       num: "JEL-080", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20260417_070326_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
+  { id: 13, name: "Jellaba 2025 #1",        num: "JEL-013", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250303_180810.jpg", emoji: "🧥", download: "" },
+  { id: 14, name: "Jellaba 2025 #2",        num: "JEL-014", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250406_180444.jpg", emoji: "🧥", download: "" },
+  { id: 15, name: "Jellaba 2025 #3",        num: "JEL-015", type: "Jellaba",    year: 2025, price: "",   img: "2025/20250506_132225.jpg", emoji: "🧥", download: "" },
+  { id: 16, name: "Jellaba 2025 #4",        num: "JEL-016", type: "Jellaba",    year: 2025, price: "",   img: "2025/20251022_183928.jpg", emoji: "🧥", download: "" },
+  { id: 17, name: "Jellaba 2025 #5",        num: "JEL-017", type: "Jellaba",    year: 2025, price: "",   img: "2025/20251208_123822.jpg", emoji: "🧥", download: "" },
 ];
 
 /* ====================
