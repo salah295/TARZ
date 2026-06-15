@@ -26,6 +26,7 @@
    Changez ce mot de passe comme vous le souhaitez
    ==================== */
 const DOWNLOAD_PASSWORD = "salem2024";
+const WHATSAPP_NUMBER = "212600000000"; // Remplacez par votre numéro sans +
 
 const products = [
   
@@ -400,6 +401,7 @@ const products = [
    ÉTAT DES FILTRES
    ==================== */
 let activeType = "all";
+let activeYear = "all";
 
 /* ====================
    AUTHENTIFICATION
@@ -425,7 +427,7 @@ function formatPrice(price) {
 
 function buildCardImg(product) {
   if (product.img) {
-    return `<img class="product-img" src="${product.img}" alt="${product.name}" />`;
+    return `<img class="product-img" src="${product.img}" alt="${product.name}" loading="lazy" />`;
   }
   return `<span style="font-size:64px;line-height:1">${product.emoji}</span>
           <div class="pattern-overlay" style="color:${typeAccentColor(product.type)}"></div>`;
@@ -433,7 +435,7 @@ function buildCardImg(product) {
 
 function buildModalImg(product) {
   if (product.img) {
-    return `<img class="product-img" src="${product.img}" alt="${product.name}" />`;
+    return `<img class="product-img" src="${product.img}" alt="${product.name}" loading="lazy" />`;
   }
   return `<span style="font-size:90px;line-height:1">${product.emoji}</span>`;
 }
@@ -448,16 +450,22 @@ function typeBgColor(type) {
   return map[type] || "#e8e0d0";
 }
 
+function buildWhatsAppUrl(product) {
+  const text = encodeURIComponent(
+    `Bonjour, je suis intéressé par la tenue Numéro ${product.num} (Type: ${product.type}, Année: ${product.year}).`
+  );
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+}
+
 /* ====================
    FILTRAGE
    ==================== */
 function getFiltered() {
-  const q   = document.getElementById("search").value.toLowerCase().trim();
-  const yr  = document.getElementById("year-sel").value;
+  const q = document.getElementById("search").value.toLowerCase().trim();
 
   return products.filter(p => {
     if (activeType !== "all" && p.type !== activeType) return false;
-    if (yr !== "all" && String(p.year) !== yr) return false;
+    if (activeYear !== "all" && String(p.year) !== activeYear) return false;
     if (q && !p.name.toLowerCase().includes(q) && !p.num.toLowerCase().includes(q)) return false;
     return true;
   });
@@ -483,24 +491,37 @@ function render() {
     return;
   }
 
-  grid.innerHTML = filtered.map(p => `
-    <article class="card" onclick="openModal(${p.id})" role="button" tabindex="0"
-             aria-label="${p.name} — ${p.type} — ${formatPrice(p.price)}"
-             onkeydown="if(event.key==='Enter') openModal(${p.id})">
-      <div class="card-img" style="background:${typeBgColor(p.type)}22">
-        ${buildCardImg(p)}
-        <span class="badge-type badge-${p.type.toLowerCase()}">${p.type}</span>
-      </div>
-      <div class="card-body">
-        <div class="card-name">${p.name}</div>
-        <div class="card-meta">
-          <span>${p.num}</span>
-          <span>${p.year}</span>
+  const sorted = filtered.slice().sort((a, b) => {
+    if (b.year !== a.year) return b.year - a.year;
+    return a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' });
+  });
+
+  let currentYear = null;
+  grid.innerHTML = sorted.map(p => {
+    const yearHeader = p.year !== currentYear
+      ? `<div class="year-divider"><span>${p.year}</span></div>`
+      : "";
+
+    currentYear = p.year;
+
+    return `${yearHeader}
+      <article class="card" onclick="openModal(${p.id})" role="button" tabindex="0"
+               aria-label="${p.name} — ${p.type} — ${formatPrice(p.price)}"
+               onkeydown="if(event.key==='Enter') openModal(${p.id})">
+        <div class="card-img" style="background:${typeBgColor(p.type)}22">
+          ${buildCardImg(p)}
+          <span class="badge-type badge-${p.type.toLowerCase()}">${p.type}</span>
         </div>
-        <div class="card-price">${formatPrice(p.price)}</div>
-      </div>
-    </article>
-  `).join("");
+        <div class="card-body">
+          <div class="card-name">${p.name}</div>
+          <div class="card-meta">
+            <span>${p.num}</span>
+            <span>${p.year}</span>
+          </div>
+          <div class="card-price">${formatPrice(p.price)}</div>
+        </div>
+      </article>`;
+  }).join("");
 }
 
 /* ====================
@@ -528,6 +549,8 @@ function openModal(id) {
   document.getElementById("m-type").textContent  = p.type;
   document.getElementById("m-year").textContent  = p.year;
   document.getElementById("m-price").textContent = formatPrice(p.price);
+  document.getElementById("m-whatsapp").href = buildWhatsAppUrl(p);
+  document.getElementById("m-whatsapp").setAttribute("aria-label", `Commander via WhatsApp: ${p.name}`);
 
   // Download button in modal
   const downloadBtn = document.getElementById("m-download");
@@ -653,12 +676,23 @@ function setType(type) {
   render();
 }
 
+function setYear(year) {
+  activeYear = year;
+  document.querySelectorAll("#year-chips .chip").forEach(chip => {
+    chip.classList.toggle("active", chip.dataset.year === year);
+  });
+  render();
+}
+
 function resetFilters() {
   activeType = "all";
+  activeYear = "all";
   document.getElementById("search").value = "";
-  document.getElementById("year-sel").value = "all";
   document.querySelectorAll("#type-chips .chip").forEach(chip => {
     chip.classList.toggle("active", chip.dataset.type === "all");
+  });
+  document.querySelectorAll("#year-chips .chip").forEach(chip => {
+    chip.classList.toggle("active", chip.dataset.year === "all");
   });
   render();
 }
@@ -673,7 +707,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* Filtre année */
-  document.getElementById("year-sel").addEventListener("change", render);
+  document.querySelectorAll("#year-chips .chip").forEach(chip => {
+    chip.addEventListener("click", () => setYear(chip.dataset.year));
+  });
 
   /* Recherche */
   document.getElementById("search").addEventListener("input", render);
