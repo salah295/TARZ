@@ -143,16 +143,6 @@ body {
   flex-wrap: wrap;
   border-bottom: 1px solid var(--border);
   background: var(--bg-card);
-  position: sticky;
-  top: 76px;
-  z-index: 90;
-  transition: transform .2s ease, opacity .2s ease;
-}
-
-body.scrolled .filters {
-  transform: translateY(calc(-100% - 76px));
-  opacity: 0;
-  pointer-events: none;
 }
 
 .filter-section {
@@ -614,17 +604,19 @@ body.scrolled .filters {
   right: 24px;
   bottom: 24px;
   z-index: 95;
-  display: inline-flex;
+  display: flex !important;
   align-items: center;
   gap: 8px;
   padding: 12px 17px 12px 13px;
   border-radius: 999px;
-  background: #25d366;
-  color: #fff;
+  background-color: #25d366 !important;
+  color: #fff !important;
   box-shadow: 0 8px 22px rgba(37, 211, 102, .28);
   font-size: 13px;
   font-weight: 500;
   text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
