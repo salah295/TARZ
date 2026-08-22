@@ -26,7 +26,7 @@
    Changez ce mot de passe comme vous le souhaitez
    ==================== */
 const DOWNLOAD_PASSWORD = "salem2024";
-const WHATSAPP_NUMBER = "212600000000"; // Remplacez par votre numéro sans +
+const WHATSAPP_NUMBER = "212600359099";
 
 const products = [
   
@@ -701,6 +701,13 @@ function resetFilters() {
    INITIALISATIONS
    ==================== */
 document.addEventListener("DOMContentLoaded", () => {
+  const updateScrollState = () => {
+    document.body.classList.toggle("scrolled", window.scrollY > 10);
+  };
+
+  window.addEventListener("scroll", updateScrollState, { passive: true });
+  updateScrollState();
+
   /* Filtres type */
   document.querySelectorAll("#type-chips .chip").forEach(chip => {
     chip.addEventListener("click", () => setType(chip.dataset.type));
