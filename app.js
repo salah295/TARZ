@@ -701,6 +701,16 @@ function resetFilters() {
    INITIALISATIONS
    ==================== */
 document.addEventListener("DOMContentLoaded", () => {
+  const backToTop = document.getElementById("back-to-top");
+
+  window.addEventListener("scroll", () => {
+    backToTop.classList.toggle("visible", window.scrollY > 300);
+  }, { passive: true });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   /* Filtres type */
   document.querySelectorAll("#type-chips .chip").forEach(chip => {
     chip.addEventListener("click", () => setType(chip.dataset.type));
