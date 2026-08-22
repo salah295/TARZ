@@ -551,6 +551,8 @@ function openModal(id) {
   document.getElementById("m-price").textContent = formatPrice(p.price);
   document.getElementById("m-whatsapp").href = buildWhatsAppUrl(p);
   document.getElementById("m-whatsapp").setAttribute("aria-label", `Commander via WhatsApp: ${p.name}`);
+  document.getElementById("m-image-whatsapp").href = buildWhatsAppUrl(p);
+  document.getElementById("m-image-whatsapp").setAttribute("aria-label", `Demander des informations sur ${p.name} via WhatsApp`);
 
   // Download button in modal
   const downloadBtn = document.getElementById("m-download");
