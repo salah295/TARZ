@@ -701,13 +701,6 @@ function resetFilters() {
    INITIALISATIONS
    ==================== */
 document.addEventListener("DOMContentLoaded", () => {
-  const updateScrollState = () => {
-    document.body.classList.toggle("scrolled", window.scrollY > 10);
-  };
-
-  window.addEventListener("scroll", updateScrollState, { passive: true });
-  updateScrollState();
-
   /* Filtres type */
   document.querySelectorAll("#type-chips .chip").forEach(chip => {
     chip.addEventListener("click", () => setType(chip.dataset.type));
