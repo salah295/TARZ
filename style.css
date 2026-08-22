@@ -315,35 +315,6 @@ body {
   background-size: 18px 18px;
 }
 
-.image-whatsapp-btn {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  z-index: 2;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #25d366;
-  color: #fff;
-  box-shadow: 0 5px 14px rgba(0, 0, 0, .2);
-  transition: transform .2s ease, background-color .2s ease;
-}
-
-.image-whatsapp-btn:hover {
-  background: #1da851;
-  color: #fff;
-  transform: scale(1.08);
-}
-
-.image-whatsapp-btn svg {
-  width: 23px;
-  height: 23px;
-  fill: currentColor;
-}
-
 .badge-type {
   position: absolute;
   top: 10px;
@@ -510,6 +481,35 @@ body {
   font-size: 90px;
   position: relative;
   overflow: hidden;
+}
+
+.modal-image-whatsapp {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  z-index: 11;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, .2);
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+.modal-image-whatsapp:hover {
+  background: #1da851;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.modal-image-whatsapp svg {
+  width: 23px;
+  height: 23px;
+  fill: currentColor;
 }
 
 .modal-body {
