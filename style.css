@@ -523,10 +523,10 @@ body {
 .modal-image-whatsapp {
   position: absolute;
   bottom: 12px;
-  right: 12px;
+  left: 50%;
   z-index: 11;
-  width: 42px;
-  height: 42px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,18 +534,19 @@ body {
   background: #25d366;
   color: #fff;
   box-shadow: 0 5px 14px rgba(0, 0, 0, .2);
+  transform: translateX(-50%);
   transition: transform .2s ease, background-color .2s ease;
 }
 
 .modal-image-whatsapp:hover {
   background: #1da851;
   color: #fff;
-  transform: scale(1.08);
+  transform: translateX(-50%) scale(1.08);
 }
 
 .modal-image-whatsapp svg {
-  width: 23px;
-  height: 23px;
+  width: 29px;
+  height: 29px;
   fill: currentColor;
 }
 
