@@ -713,6 +713,9 @@ function resetFilters() {
    ==================== */
 document.addEventListener("DOMContentLoaded", () => {
   const backToTop = document.getElementById("back-to-top");
+  const modalImage = document.getElementById("m-img");
+  let touchStartX = 0;
+  let touchStartY = 0;
 
   window.addEventListener("scroll", () => {
     backToTop.classList.toggle("visible", window.scrollY > 300);
@@ -721,6 +724,21 @@ document.addEventListener("DOMContentLoaded", () => {
   backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  modalImage.addEventListener("touchstart", event => {
+    const touch = event.changedTouches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+  }, { passive: true });
+
+  modalImage.addEventListener("touchend", event => {
+    const touch = event.changedTouches[0];
+    const distanceX = touch.clientX - touchStartX;
+    const distanceY = touch.clientY - touchStartY;
+
+    if (Math.abs(distanceX) < 50 || Math.abs(distanceX) <= Math.abs(distanceY)) return;
+    navigateProduct(distanceX < 0 ? 1 : -1);
+  }, { passive: true });
 
   /* Filtres type */
   document.querySelectorAll("#type-chips .chip").forEach(chip => {
