@@ -378,7 +378,18 @@ const products = [
   { id: 358, name: "Jellaba 2024 #39", num: "JEL-358", type: "Jellaba", year: 2024, price: "", img: "2024/Screenshot_20250922_215513_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 359, name: "Jellaba 2024 #40", num: "JEL-359", type: "Jellaba", year: 2024, price: "", img: "2024/Screenshot_20250922_215513_WhatsApp.jpg", emoji: "🧥", download: "" },
   /*{ id: 360, name: "Jellaba 2026 #1", num: "JEL-360", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132321.jpg", emoji: "🧥", download: "" },*/
-  { id: 361, name: "Jellaba 2026 #2", num: "JEL-361", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132605.jpg", emoji: "🧥", download: "" },
+ 
+   { id: 378, name: "Jellaba 2026 #19", num: "JEL-378", type: "Jellaba", year: 2026, price: "", img: "2026/num1.jpg", emoji: "🧥", download: "" },
+  { id: 379, name: "Jellaba 2026 #20", num: "JEL-379", type: "Caftan", year: 2026, price: "", img: "2026/num2.jpg", emoji: "🧥", download: "" },
+  { id: 380, name: "Jellaba 2026 #21", num: "JEL-380", type: "Caftan", year: 2026, price: "", img: "2026/num3.jpg", emoji: "🧥", download: "" },
+  { id: 381, name: "Jellaba 2026 #22", num: "JEL-381", type: "Caftan", year: 2026, price: "", img: "2026/num4.jpg", emoji: "🧥", download: "" },
+  { id: 382, name: "Jellaba 2026 #23", num: "JEL-382", type: "Caftan", year: 2026, price: "", img: "2026/num5.jpg", emoji: "🧥", download: "" },
+  { id: 383, name: "Jellaba 2026 #24", num: "JEL-383", type: "Jellaba", year: 2026, price: "", img: "2026/num6.jpg", emoji: "🧥", download: "" },
+  
+   
+   
+   
+   { id: 361, name: "Jellaba 2026 #2", num: "JEL-361", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132605.jpg", emoji: "🧥", download: "" },
   { id: 362, name: "Jellaba 2026 #3", num: "JEL-362", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260224_102355_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
   { id: 363, name: "Jellaba 2026 #4", num: "JEL-363", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260228_141744_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
   { id: 364, name: "Jellaba 2026 #5", num: "JEL-364", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260302_101031_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
