@@ -517,6 +517,7 @@ body {
   font-size: 90px;
   position: relative;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .modal-image-whatsapp {
