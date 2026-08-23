@@ -28,7 +28,8 @@
 const DOWNLOAD_PASSWORD = "salem2024";
 const WHATSAPP_NUMBER = "212600359099";
 
-const products = [  
+const products = [
+  
   { id: 18, name: "Jellaba 2025 #6",        num: "JEL-018", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250108_175109_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 19, name: "Jellaba 2025 #7",        num: "JEL-019", type: "Jellaba",    year: 2025, price: "",   img: "2025/1778706294617.png", emoji: "🧥", download: "" },
   { id: 20, name: "Jellaba 2025 #8",        num: "JEL-020", type: "Jellaba",    year: 2025, price: "",   img: "2025/Screenshot_20250306_215925_WhatsApp.jpg", emoji: "🧥", download: "" },
@@ -377,13 +378,6 @@ const products = [
   { id: 358, name: "Jellaba 2024 #39", num: "JEL-358", type: "Jellaba", year: 2024, price: "", img: "2024/Screenshot_20250922_215513_WhatsApp.jpg", emoji: "🧥", download: "" },
   { id: 359, name: "Jellaba 2024 #40", num: "JEL-359", type: "Jellaba", year: 2024, price: "", img: "2024/Screenshot_20250922_215513_WhatsApp.jpg", emoji: "🧥", download: "" },
   /*{ id: 360, name: "Jellaba 2026 #1", num: "JEL-360", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132321.jpg", emoji: "🧥", download: "" },*/
-
-   { id: 378, name: "Jellaba 2026 #19",        num: "JEL-019", type: "Caftan",    year: 2026, price: "",   img: "2026/num1.jpg", emoji: "🧥", download: "" },
-  { id: 379, name: "Jellaba 2026 #20",        num: "JEL-020", type: "Caftan",    year: 2026, price: "",   img: "2026/num2.jpg", emoji: "🧥", download: "" },
-  { id: 380, name: "Jellaba 2026 #21",        num: "JEL-021", type: "Caftan",    year: 2026, price: "",   img: "2026/num3.jpg", emoji: "🧥", download: "" },
-  { id: 381, name: "Jellaba 2026 #22",        num: "JEL-022", type: "Caftan",    year: 2026, price: "",   img: "2026/num4.jpg", emoji: "🧥", download: "" },
-  { id: 382, name: "Jellaba 2026 #23",        num: "JEL-023", type: "Caftan",    year: 2026, price: "",   img: "2026/num5.jpg", emoji: "🧥", download: "" },
-  { id: 383, name: "Jellaba 2026 #24",        num: "JEL-024", type: "Caftan",    year: 2026, price: "",   img: "2026/num6.jpg", emoji: "🧥", download: "" },
   { id: 361, name: "Jellaba 2026 #2", num: "JEL-361", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132605.jpg", emoji: "🧥", download: "" },
   { id: 362, name: "Jellaba 2026 #3", num: "JEL-362", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260224_102355_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
   { id: 363, name: "Jellaba 2026 #4", num: "JEL-363", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260228_141744_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
@@ -401,12 +395,6 @@ const products = [
   { id: 375, name: "Jellaba 2026 #16", num: "JEL-375", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260415_221145_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
   { id: 376, name: "Jellaba 2026 #17", num: "JEL-376", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260416_085718_TikTok.jpg", emoji: "🧥", download: "" },
   { id: 377, name: "Jellaba 2026 #18", num: "JEL-377", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260507_073920_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
-
-
-
-   
-
-
 ];
 
 /* ====================
@@ -525,7 +513,16 @@ function render() {
           <span class="badge-type badge-${p.type.toLowerCase()}">${p.type}</span>
         </div>
         <div class="card-body">
-          <div class="card-name">${p.name}</div>
+          <div class="card-title-row">
+            <div class="card-name">${p.name}</div>
+            <a class="card-whatsapp-btn" href="${buildWhatsAppUrl(p)}" target="_blank" rel="noopener"
+               aria-label="Demander des informations sur ${p.name} via WhatsApp"
+               onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.2 21.5h-.1c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.8 1 1-3.7-.2-.3a9.7 9.7 0 0 1-1.5-5.2C2.5 6.5 6.9 2 12.2 2c2.6 0 5 1 6.8 2.8a9.6 9.6 0 0 1 2.8 6.9c0 5.3-4.3 9.8-9.6 9.8Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.4Z"/>
+              </svg>
+            </a>
+          </div>
           <div class="card-meta">
             <span>${p.num}</span>
             <span>${p.year}</span>
