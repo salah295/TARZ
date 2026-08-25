@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SALEM — Catalogue</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Catalogue de tenues traditionnelles marocaines | Salem</title>
+  <meta name="description" content="Découvrez le catalogue Salem : caftans, jellabas et tackchitas marocaines. Modèles traditionnels et modernes, sélectionnés par année et type." />
+  <meta name="keywords" content="catalogue salem, tenues traditionnelles marocaines, caftan marocain, jellaba marocaine, tackchita, mode marocaine, robe marocaine" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="SALEM Catalogue" />
+  <meta name="theme-color" content="#B5843A" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  <meta property="og:title" content="Catalogue de tenues traditionnelles marocaines | Salem" />
+  <meta property="og:description" content="Catalogue Salem de caftans, jellabas et tackchitas marocaines. Découvrez des modèles élégants et authentiques." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Catalogue de tenues traditionnelles marocaines | Salem" />
+  <meta name="twitter:description" content="Catalogue Salem de caftans, jellabas et tackchitas marocaines." />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <!-- Google tag (gtag.js) -->
@@ -15,26 +29,49 @@
 
   gtag('config', 'G-KPHG07S9VJ');
 </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Catalogue Salem",
+      "description": "Catalogue de tenues traditionnelles marocaines : caftans, jellabas et tackchitas.",
+      "inLanguage": "fr",
+      "about": {
+        "@type": "Thing",
+        "name": "Tenues traditionnelles marocaines"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SALEM"
+      }
+    }
+  </script>
 </head>
 <body>
 
   <header class="header">
     <div class="header-inner">
-      <div class="logo">
+      <div class="logo" aria-label="SALEM Catalogue de tenues traditionnelles marocaines">
         <span class="logo-dar">SALEM</span>
         <span class="logo-name">Catalogue</span>
         <p class="logo-subtitle">Catalogue de tenues traditionnelles marocaines</p>
       </div>
       <div class="search-wrap">
-        <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <circle cx="9" cy="9" r="6"/><path d="M15 15l-3-3"/>
         </svg>
-        <input type="text" id="search" placeholder="Rechercher un modèle ou numéro…" />
+        <label class="sr-only" for="search">Rechercher un modèle dans le catalogue</label>
+        <input type="text" id="search" placeholder="Rechercher un modèle ou numéro…" aria-label="Rechercher un modèle dans le catalogue" />
       </div>
     </div>
   </header>
 
-  <nav class="filters">
+  <main>
+    <section class="hero-intro" aria-labelledby="catalog-title">
+      <h1 id="catalog-title">Catalogue de caftans, jellabas et tackchitas marocaines</h1>
+    </section>
+
+  <nav class="filters" aria-label="Filtres du catalogue">
     <div class="filter-section">
       <span class="filter-label">Type</span>
       <div class="chip-group" id="type-chips">
@@ -65,11 +102,11 @@
     </button>
   </nav>
 
-  <div class="stats-bar">
+  <div class="stats-bar" aria-live="polite">
     <span id="stats-text"></span>
   </div>
 
-  <a class="floating-whatsapp" href="https://wa.me/212600359099" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp au 0600359099">
+  <a class="floating-whatsapp" href="https://wa.me/212600359099" target="_blank" rel="noopener" aria-label="Contacter Salem sur WhatsApp au 0600359099">
     <svg viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.5-1.7a11.8 11.8 0 0 0 5.4 1.3h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.1-1.2-6.1-3.5-8.3ZM12.2 21.5h-.1c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.8 1 1-3.7-.2-.3a9.7 9.7 0 0 1-1.5-5.2C2.5 6.5 6.9 2 12.2 2c2.6 0 5 1 6.8 2.8a9.6 9.6 0 0 1 2.8 6.9c0 5.3-4.3 9.8-9.6 9.8Zm5.3-7.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.6-1.8-1.8-2.1-.2-.3 0-.5.2-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.3-.2-.6-.4Z"/>
     </svg>
@@ -82,7 +119,7 @@
     </svg>
   </button>
 
-  <main class="grid" id="grid">
+    <section class="grid" id="grid" aria-live="polite" aria-label="Catalogue des produits">
     <article class="card skeleton-card">
       <div class="card-img skeleton-img"></div>
       <div class="card-body">
@@ -125,6 +162,7 @@
         <div class="skeleton-line short"></div>
       </div>
     </article>
+    </section>
   </main>
 
   <div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-label="Détail du produit">
