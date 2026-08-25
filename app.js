@@ -436,9 +436,19 @@ function formatPrice(price) {
   return price.toLocaleString("fr-MA") + " MAD";
 }
 
-function buildCardImg(product) {
+const PRODUCT_IMAGE_PLACEHOLDER = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
+  <svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+    <rect width="800" height="1000" fill="#F5F0E6"/>
+    <rect x="60" y="60" width="680" height="880" rx="28" fill="#EFE7DA"/>
+    <circle cx="400" cy="420" r="150" fill="#E6D7B7" opacity="0.7"/>
+    <path d="M230 740C280 640 330 590 400 590C470 590 520 640 570 740" stroke="#D0B06D" stroke-width="28" fill="none" stroke-linecap="round"/>
+  </svg>
+`)}`;
+
+function buildCardImg(product, shouldPreload = false) {
   if (product.img) {
-    return `<img class="product-img" src="${product.img}" alt="${product.name}" loading="lazy" />`;
+    const src = shouldPreload ? product.img : PRODUCT_IMAGE_PLACEHOLDER;
+    return `<img class="product-img" src="${src}" data-src="${product.img}" alt="${product.name}" loading="lazy" decoding="async" />`;
   }
   return `<span style="font-size:64px;line-height:1">${product.emoji}</span>
           <div class="pattern-overlay" style="color:${typeAccentColor(product.type)}"></div>`;
@@ -446,9 +456,33 @@ function buildCardImg(product) {
 
 function buildModalImg(product) {
   if (product.img) {
-    return `<img class="product-img" src="${product.img}" alt="${product.name}" loading="lazy" />`;
+    return `<img class="product-img" src="${product.img}" alt="${product.name}" loading="lazy" decoding="async" />`;
   }
   return `<span style="font-size:90px;line-height:1">${product.emoji}</span>`;
+}
+
+function observeProductImages() {
+  const images = document.querySelectorAll('.product-img[data-src]');
+  if (!images.length) return;
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+
+      const img = entry.target;
+      const realSrc = img.dataset.src;
+      if (realSrc) {
+        img.src = realSrc;
+        img.removeAttribute('data-src');
+      }
+      obs.unobserve(img);
+    });
+  }, {
+    rootMargin: '200px 0px',
+    threshold: 0.01
+  });
+
+  images.forEach(img => observer.observe(img));
 }
 
 function typeAccentColor(type) {
@@ -508,19 +542,20 @@ function render() {
   });
 
   let currentYear = null;
-  grid.innerHTML = sorted.map(p => {
+  grid.innerHTML = sorted.map((p, index) => {
     const yearHeader = p.year !== currentYear
       ? `<div class="year-divider"><span>${p.year}</span></div>`
       : "";
 
     currentYear = p.year;
+    const shouldPreload = index < 6;
 
     return `${yearHeader}
       <article class="card" onclick="openModal(${p.id})" role="button" tabindex="0"
                aria-label="${p.name} — ${p.type} — ${formatPrice(p.price)}"
                onkeydown="if(event.key==='Enter') openModal(${p.id})">
         <div class="card-img" style="background:${typeBgColor(p.type)}22">
-          ${buildCardImg(p)}
+          ${buildCardImg(p, shouldPreload)}
           <span class="badge-type badge-${p.type.toLowerCase()}">${p.type}</span>
         </div>
         <div class="card-body">
@@ -542,6 +577,8 @@ function render() {
         </div>
       </article>`;
   }).join("");
+
+  observeProductImages();
 }
 
 /* ====================
