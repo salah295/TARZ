@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salemcatalog.work.gd/sitemap.xml
