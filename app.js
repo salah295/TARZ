@@ -387,7 +387,8 @@ const products = [
   { id: 383, name: "Jellaba 2026 #24", num: "JEL-383", type: "Jellaba", year: 2026, price: "", img: "2026/num6.jpg", emoji: "🧥", download: "" },
   
    
-   
+   { id: 377, name: "Jellaba 2026 #19", num: "JEL-377", type: "Tackchita", year: 2026, price: "", img: "2026/file_00000000c9748243a0267060a567acf2.png", emoji: "🧥", download: "" },
+
    
    { id: 361, name: "Jellaba 2026 #2", num: "JEL-361", type: "Jellaba", year: 2026, price: "", img: "2026/20260312_132605.jpg", emoji: "🧥", download: "" },
   { id: 362, name: "Jellaba 2026 #3", num: "JEL-362", type: "Jellaba", year: 2026, price: "", img: "2026/Screenshot_20260224_102355_WhatsAppBusiness.jpg", emoji: "🧥", download: "" },
